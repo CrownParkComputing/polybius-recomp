@@ -53,9 +53,11 @@ are applied. Linux directly executes x86-64; Android uses the pinned FEXCore.
 Camera/VR support and optional branches remain unverified. The tested path is
 ordinary screen output, not a VR implementation. Longer gameplay, save reload,
 music ordering and individual effects remain unverified. The diagnostic run
-was ended through the window manager (SIGTERM), not the in-game Exit action.
+was ended through the window manager (SIGTERM). A separate focused check opened
+Settings with F10 and used the in-game exit confirmation; it produced the
+runtime report and exited successfully with status 0.
 
 Private evidence: out/PACKAGE_FINDINGS.md, package-identity.json,
 overlay-evidence.json, artifact/, opening-input-contract/, linux-first-boot/,
 linux-play-check/, linux-audio-check/, android-install-verification.json and
-the native/Android build/test logs.
+linux-menu-check/ plus the native/Android build/test logs.
